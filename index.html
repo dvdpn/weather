@@ -6,25 +6,8 @@
 
 <link rel="icon" href="https://github.com/dvdpn/weather/blob/master/darksky.png">
 
-  </head>
-  <script type="text/javascript">
-  if (('standalone' in navigator) && navigator.standalone) {
-  document.addEventListener('click', function(e) {
-    var curnode = e.target
-    while (!(/^(a|html)$/i).test(curnode.nodeName)) {
-      curnode = curnode.parentNode
-    }
-    if ('href' in curnode
-      && (chref = curnode.href).replace(document.location.href, '').indexOf('#')
-      && (!(/^[a-z\+\.\-]+:/i).test(chref)
-      || chref.indexOf(document.location.protocol + '//' + document.location.host) === 0)
-    ) {
-      e.preventDefault()
-      document.location.href = curnode.href
-    }
-  }, false)
-}
-      </script>
+<script src="stay_standalone.js" type="text/javascript"></script>
+</head>
 <body>
     <a id="link" target="_parent" href="https://darksky.net/forecast/37.2474,-121.8847/us12/en"></a>
     <script type="text/javascript">
